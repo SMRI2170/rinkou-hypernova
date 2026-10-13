@@ -1,0 +1,13 @@
+{
+  "name": "rinkou-hypernova",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PPT generator for HyperNova (CRYPTO 2024) 2nd-round rinkou presentation",
+  "scripts": {
+    "build": "node slides/compile.js",
+    "lint": "node -e \"const fs=require('fs');const BAD=/[\\u201c\\u201d\\u2018\\u2019\\u00a0]/g;let ok=true;for(const fn of fs.readdirSync('./slides').filter(f=>f.endsWith('.js'))){const src=fs.readFileSync('./slides/'+fn,'utf8');const lines=src.split('\\n');for(let i=0;i<lines.length;i++){const m=lines[i].match(BAD);if(m){console.error('NON-ASCII in slides/'+fn+':'+(i+1)+' -> '+JSON.stringify(m));ok=false}}}if(!ok){process.exit(1)}else{console.log('Pre-compile lint passed.')}\""
+  },
+  "dependencies": {
+    "pptxgenjs": "^3.12.0"
+  }
+}

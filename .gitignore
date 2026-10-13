@@ -1,0 +1,18 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Dependencies & build artifacts
+node_modules/
+node_modules
+slides-md/node_modules/
+slides-md/.slidev/
+slides/output/
+
+# Editor / OS
+*.swp
+*.swo
+Thumbs.db
+
+# Logs
+*.log

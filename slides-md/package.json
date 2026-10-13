@@ -1,0 +1,15 @@
+{
+  "name": "rinkou-hypernova-slides",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /rinkou-hypernova/slides/ --out ../docs/slides",
+    "export": "slidev export --output ../docs/pdf/hypernova-rinkou.pdf",
+    "export:dark": "slidev export --dark --output ../docs/pdf/hypernova-rinkou-dark.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.50.0",
+    "@slidev/theme-default": "*"
+  }
+}

@@ -103,19 +103,18 @@ function createSlide(pres) {
     paraSpaceAfter: 2,
   });
 
-  // 下部のポイント
+  // 下部のポイント（下段の cost 式直後に吸収済み。スペース衝突を避けるため別行位置へ）
   slide.addText([
-    { text: 'ポイント：', options: { bold: true, fontSize: 12, color: theme.primary } },
-    { text: ' Nova は ', options: { fontSize: 12 } },
-    { text: 'R1CS', options: { italic: true, fontSize: 12 } },
-    { text: ' に閉じていた。HyperNova は ', options: { fontSize: 12 } },
-    { text: 'CCS', options: { italic: true, fontSize: 12 } },
-    { text: ' で同じコスト特性を実現 ── ', options: { fontSize: 12 } },
-    { text: 'これが Slide 8 の「1 MSM」の主張', options: { fontSize: 12, italic: true, color: theme.accent } },
+    { text: '◆ ', options: { color: theme.accent, bold: true, fontSize: 11 } },
+    { text: 'Nova は ', options: { fontSize: 11 } },
+    { text: 'R1CS', options: { italic: true, fontSize: 11 } },
+    { text: ' 専用 / HyperNova は ', options: { fontSize: 11 } },
+    { text: 'CCS', options: { italic: true, fontSize: 11 } },
+    { text: ' で同じ O(1)·MSM コスト', options: { fontSize: 11 } },
   ], {
-    x: 0.43, y: 6.85, w: 9.06, h: 0.3,
+    x: 0.43, y: 6.95, w: 8.5, h: 0.4,
     fontFace: fonts.jp,
-    valign: 'middle', align: 'left',
+    valign: 'middle', align: 'left', margin: 0,
   });
 
   drawPageNumber(slide, 14);

@@ -12,7 +12,7 @@ function createSlide(pres) {
   drawConceptDefinition(
     slide,
     'Folding Scheme',
-    '2 つの instance を 1 つの instance に reduce する暗号プリミティブ',
+    '2 つの instance を 1 つに reduce する暗号プリミティブ',
     [
       '■ アイデア',
       '  ・ NP 関係 R の instance 2 つ (u₁, u₂) を新しい instance u に reduce',

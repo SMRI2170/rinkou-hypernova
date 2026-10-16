@@ -11,6 +11,56 @@
 | レイアウト | 4:3 (10.0 × 7.5 in) カスタムレイアウト |
 | GitHub Pages | `docs/` から配信（後述） |
 
+## スライド番号 ── PowerPoint 上で手動設定する
+
+スライド番号は雛形側で自動挿入していません。PowerPoint 上で表示されるスライド番号は、発表者が自分で挿入・書式設定する想定です。
+
+### PowerPoint でスライド番号を手動設定する手順
+
+1. PPTX ファイル（`hypernova-rinkou.pptx`）を PowerPoint で開く
+2. **挿入** タブ → **スライド番号** を選択
+3. 「スライド番号を挿入する」をチェック、開始番号を設定（既定は 1）
+4. 「すべてに適用」をクリック
+5. 配置・フォント・サイズ・色を変更したい場合：
+   - フッター枠（番号表示枠）を選択
+   - 右クリック → 「フォント」「配置」で調整
+
+### 雛形側に番号機能を戻したい場合
+
+スライド番号 自動挿入機能を再有効化する手順：
+
+1. `slides/slide-XX.js` の末尾（`drawPageNumber` import を含む行）に再度記述：
+   ```js
+   drawPageNumber(slide, XX);   // XX はスライド番号
+   ```
+2. `node slides/compile.js` で再ビルド
+3. OneDrive と GitHub Pages に再同期
+
+具体的な例（slide-02 の場合）：
+
+```diff
+ const { drawTitleBar, drawPageNumber, ... } = require('./helpers');
+ ...
++drawPageNumber(slide, 2);
+ module.exports = { createSlide };
+```
+
+### 番号を一部だけ表示したい場合
+
+```js
+drawPageNumber(slide, 2);  // 表示する
+drawPageNumber(slide, 6);  // 非表示（slide-06.js からこの行を消す）
+```
+
+発表スライドでは：
+
+- **表紙（slide-01）**: 番号なし（既定）
+- **本編（02-13）**: すべて 02, 03, …, 13 を表示（推奨）
+- **数式・実データ編（14-16）**: 14, 15, 16 を表示（推奨）
+
+合計 15 ページに番号が入ります。
+
+
 ## ブラウザでスライドを見る
 
 GitHub Pages 経由で配信される URL:

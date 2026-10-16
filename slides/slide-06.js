@@ -60,6 +60,5 @@ function createSlide(pres) {
     { fontSize: 12, bold: true, color: theme.primary, borderColor: theme.light, borderWidth: 0 }
   );
 
-  drawPageNumber(slide, 6);
 }
 module.exports = { createSlide };

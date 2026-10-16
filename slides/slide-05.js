@@ -34,6 +34,5 @@ function createSlide(pres) {
     align: 'left', valign: 'middle',
   });
 
-  drawPageNumber(slide, 5);
 }
 module.exports = { createSlide };

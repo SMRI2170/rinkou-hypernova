@@ -51,6 +51,5 @@ function createSlide(pres) {
     });
   });
 
-  drawPageNumber(slide, 11);
 }
 module.exports = { createSlide };

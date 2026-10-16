@@ -32,6 +32,5 @@ function createSlide(pres) {
     { fontSize: 12, bodyH: 5.4 }
   );
 
-  drawPageNumber(slide, 4);
 }
 module.exports = { createSlide };

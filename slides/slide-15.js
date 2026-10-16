@@ -83,6 +83,5 @@ function createSlide(pres) {
     paraSpaceAfter: 2,
   });
 
-  drawPageNumber(slide, 15);
 }
 module.exports = { createSlide };

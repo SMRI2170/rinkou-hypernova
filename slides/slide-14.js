@@ -117,6 +117,5 @@ function createSlide(pres) {
     valign: 'middle', align: 'left', margin: 0,
   });
 
-  drawPageNumber(slide, 14);
 }
 module.exports = { createSlide };

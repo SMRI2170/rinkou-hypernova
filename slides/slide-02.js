@@ -20,6 +20,5 @@ function createSlide(pres) {
     { text: '9. 限界と今後 ── まとめ', level: 0 },
   ], { fontSize: 20 });
 
-  drawPageNumber(slide, 2);
 }
 module.exports = { createSlide };
